@@ -30,10 +30,6 @@ async def ffmpeg(ctx, *, command):
     Execute an FFmpeg command on a Discord video link, uploaded file, or reply.
     Example usage: !ffmpeg -vf "scale=320:240"
     """
-    # Check for admin role or user permissions if necessary
-    if not ctx.author.guild_permissions.administrator:
-        await ctx.send("You don't have permission to use this command.")
-        return
 
     # Get the attachment or link from the message or reply
     attachment_url = None
@@ -173,4 +169,4 @@ async def magik(ctx):
         await ctx.send(f"An error occurred: {str(e)}")
 
 
-bot.run("PUTINTOKEN")
+bot.run("PUTINTOKEN") # replace PUTINTOKEN with your discord bot token
